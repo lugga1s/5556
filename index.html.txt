@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bomdelle Confeitaria | Itacaré</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="overlay">
+    <h1>Bomdelle Confeitaria</h1>
+    <p>Doces artesanais no Pôr do Sol de Itacaré</p>
+    <a href="#produtos" class="btn">Ver produtos</a>
+  </div>
+</header>
+
+<!-- CATEGORIAS -->
+<section id="produtos" class="section">
+  <h2>Nossos Produtos</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="assets/imagens/bolo.jpg" alt="Bolos artesanais">
+      <h3>Bolos Artesanais</h3>
+      <p>Perfeitos para aniversários e celebrações.</p>
+    </div>
+    <div class="card">
+      <img src="assets/imagens/pote.jpg" alt="Doces no pote">
+      <h3>Doces no Pote</h3>
+      <p>Ideais para sobremesa ou presente.</p>
+    </div>
+    <div class="card">
+      <img src="assets/imagens/sobremesa.jpg" alt="Sobremesas especiais">
+      <h3>Sobremesas Especiais</h3>
+      <p>Sabores exclusivos feitos sob encomenda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEXTO INFORMATIVO -->
+<section class="section light">
+  <p>
+    A Bomdelle é uma confeitaria artesanal localizada no Pôr do Sol em Itacaré.
+    Cada doce é feito à mão, com ingredientes selecionados e muito cuidado.
+    Aqui você pode visitar o espaço ou encomendar seus doces com praticidade.
+  </p>
+</section>
+
+<!-- VANTAGENS -->
+<section class="section">
+  <h2>Encomendas e Vantagens</h2>
+  <ul class="benefits">
+    <li>Reservas a partir de 3 unidades</li>
+    <li>Desconto progressivo a partir de 5 unidades</li>
+    <li>Entrega grátis em pedidos selecionados</li>
+    <li>Retirada no local</li>
+  </ul>
+  <a class="btn" href="https://wa.me/55SEUNUMERO">Fazer encomenda</a>
+</section>
+
+<!-- MAPA -->
+<section class="section light">
+  <h2>Onde estamos</h2>
+  <iframe
+    src="https://www.google.com/maps?q=Itacaré%20Por%20do%20Sol&output=embed"
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <p>Bomdelle Confeitaria • Itacaré – BA</p>
+  <a href="https://instagram.com/bomdelle">Instagram</a> |
+  <a href="https://wa.me/55SEUNUMERO">WhatsApp</a>
+</footer>
+
+</body>
+</html>
