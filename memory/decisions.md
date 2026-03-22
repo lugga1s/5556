@@ -66,3 +66,12 @@
 - Local: Can create custom skills, modify existing ones, install community skills, full extensibility
 **Alternatives rejected:** Provide incomplete explanation of scope differences
 
+## 2026-03-22 - Validate Stop Hook Functionality
+**Decision:** Confirmed that Stop hook (`~/.claude/stop-hook-git-check.sh`) is working correctly for automatic memory persistence
+**Reason:** User discovered the persistent memory system on their own and asked clarifying questions about the Stop hook message that appears at end of sessions
+**Key points:**
+- Stop hook automatically checks for uncommitted changes and forces memory file commits
+- User understands the purpose: ensures `memory/` files are always saved to git after each conversation
+- User is comfortable with this automated approach to memory persistence
+**Alternatives rejected:** N/A (validation only)
+

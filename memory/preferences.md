@@ -43,4 +43,5 @@
 - Wants to understand minimum context required to effectively use Skill Creator for new skill development
 - Curious about differences in skill availability between web/sandbox environment vs. local machine
 - Interested in understanding skill scopes: global (`~/.claude/skills/`) vs. project-specific (`.claude/skills/`)
+- Actively explores and discovers system features (e.g., discovered persistent memory system and asked clarifying questions about how it works)
 
