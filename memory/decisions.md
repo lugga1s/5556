@@ -140,3 +140,13 @@
 - Confirmed repository uses `master` as primary branch
 **Alternatives rejected:** Keep memory system isolated on feature branch (would cause memory unavailability in future sessions)
 
+## 2026-03-22 - Define Next Steps After PR Merge
+**Decision:** Present user with prioritized options for next phase of development (idea-capture skill implementation vs other improvements)
+**Reason:** PR successfully merged to master, completing foundation work. Need to clarify which direction user wants to pursue
+**Key options presented:**
+1. Implement the idea-capture skill (primary objective from requirements interview)
+2. Install Skill Creator globally on local machine
+3. Explore other candidate skills (`/session-summary`, `/project-context`, `/decisions`)
+4. Refine memory system structure and filtering logic
+**Next action:** Await user decision on priority
+

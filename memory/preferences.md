@@ -52,4 +52,6 @@
 - Interested in using Gitea API for creating PRs when `gh` CLI is not available
 - Prefers practical explanations using metaphors (e.g., Git as physical file cabinet with drawers for branches)
 - Appreciates layered explanations: technical details + layperson analogies for understanding complex concepts
+- Interested in planning and prioritization of next steps (wants clarity on what options are available)
+- Values structured summary of accomplishments and next options when a phase is complete
 
