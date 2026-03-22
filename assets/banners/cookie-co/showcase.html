@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie & Co. — Banner Showcase</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=Abril+Fatface&family=Caveat:wght@600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'Lato', sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .page-title {
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-bottom: 48px;
+  }
+
+  .banner-section {
+    max-width: 1080px;
+    margin: 0 auto 60px;
+  }
+
+  .banner-label {
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.3;
+    margin-bottom: 12px;
+  }
+
+  .banner-label span {
+    opacity: 1;
+    color: #E8A84C;
+  }
+
+  /* =========================================================
+     BANNER 1 — RETRO / VINTAGE
+     ========================================================= */
+  .banner-retro {
+    width: 1080px;
+    height: 1080px;
+    background-color: #F5ECD7;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .retro-texture {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(180,120,60,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(100,50,10,0.06) 0%, transparent 50%);
+  }
+
+  .retro-border-outer {
+    position: absolute;
+    inset: 28px;
+    border: 3px solid #8B5E2E;
+  }
+
+  .retro-border-inner {
+    position: absolute;
+    inset: 38px;
+    border: 1px solid #8B5E2E;
+  }
+
+  .retro-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  .retro-corner::before, .retro-corner::after {
+    content: '';
+    position: absolute;
+    background: #8B5E2E;
+  }
+  .retro-corner::before { width: 40px; height: 3px; top: 0; left: 0; }
+  .retro-corner::after  { width: 3px; height: 40px; top: 0; left: 0; }
+
+  .retro-corner.tl { top: 22px; left: 22px; }
+  .retro-corner.tr { top: 22px; right: 22px; transform: scaleX(-1); }
+  .retro-corner.bl { bottom: 22px; left: 22px; transform: scaleY(-1); }
+  .retro-corner.br { bottom: 22px; right: 22px; transform: scale(-1); }
+
+  .retro-badge {
+    background: #3D1F0A;
+    color: #F5ECD7;
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 8px 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .retro-headline {
+    font-size: 112px;
+    font-weight: 900;
+    color: #3D1F0A;
+    line-height: 0.9;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+
+  .retro-headline em {
+    font-style: italic;
+    color: #8B5E2E;
+    display: block;
+    font-size: 76px;
+    line-height: 1.1;
+    margin-top: 8px;
+  }
+
+  .retro-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0;
+    width: 500px;
+  }
+
+  .retro-divider::before, .retro-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #8B5E2E;
+  }
+
+  .retro-divider-icon {
+    color: #C4843A;
+    font-size: 22px;
+  }
+
+  .retro-tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    color: #5C3310;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .retro-dots-row {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .retro-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #8B5E2E;
+    opacity: 0.5;
+  }
+  .retro-dot.active { opacity: 1; background: #C4843A; }
+
+  .retro-cta {
+    margin-top: 20px;
+    background: #3D1F0A;
+    color: #F5ECD7;
+    padding: 18px 48px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .retro-footnote {
+    position: absolute;
+    bottom: 60px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #8B5E2E;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  /* Halftone dot pattern */
+  .retro-halftone {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.06;
+    background-image: radial-gradient(#3D1F0A 1.5px, transparent 1.5px);
+    background-size: 12px 12px;
+  }
+  .retro-halftone.tl { top: 50px; left: 50px; }
+  .retro-halftone.br { bottom: 50px; right: 50px; }
+
+  /* =========================================================
+     BANNER 2 — ILLUSTRATED / KAWAII
+     ========================================================= */
+  .banner-kawaii {
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(145deg, #FFF0E8 0%, #FFDDC8 40%, #FFE8B0 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kawaii-blob {
+    position: absolute;
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+  .kawaii-blob-1 {
+    width: 500px; height: 500px;
+    background: rgba(255,180,100,0.18);
+    top: -100px; right: -100px;
+    animation: none;
+  }
+  .kawaii-blob-2 {
+    width: 400px; height: 400px;
+    background: rgba(240,140,80,0.12);
+    bottom: -80px; left: -80px;
+    border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%;
+  }
+
+  /* CSS cookie illustrations */
+  .cookie-illustration {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #E8A84C, #C4703A);
+    box-shadow: 4px 6px 12px rgba(80,30,0,0.2);
+  }
+  .cookie-chip {
+    position: absolute;
+    border-radius: 50%;
+    background: #4A2010;
+  }
+
+  .ci-1 { width: 110px; height: 110px; top: 80px; left: 90px; }
+  .ci-2 { width: 80px; height: 80px; top: 60px; right: 120px; opacity: 0.7; }
+  .ci-3 { width: 140px; height: 140px; bottom: 90px; right: 80px; }
+  .ci-4 { width: 70px; height: 70px; bottom: 120px; left: 70px; opacity: 0.6; }
+
+  /* chips on ci-1 */
+  .ci-1 .chip-a { width: 14px; height: 10px; top: 30px; left: 22px; }
+  .ci-1 .chip-b { width: 10px; height: 8px; top: 50px; left: 50px; }
+  .ci-1 .chip-c { width: 12px; height: 9px; top: 20px; left: 60px; }
+  .ci-1 .chip-d { width: 9px; height: 7px; top: 65px; left: 30px; }
+
+  .ci-3 .chip-a { width: 18px; height: 13px; top: 35px; left: 25px; }
+  .ci-3 .chip-b { width: 14px; height: 10px; top: 60px; left: 65px; }
+  .ci-3 .chip-c { width: 16px; height: 12px; top: 85px; left: 35px; }
+  .ci-3 .chip-d { width: 12px; height: 9px; top: 40px; left: 80px; }
+  .ci-3 .chip-e { width: 10px; height: 8px; top: 100px; left: 80px; }
+
+  /* Sprinkles */
+  .sprinkle {
+    position: absolute;
+    border-radius: 4px;
+    transform: rotate(var(--r));
+  }
+
+  .kawaii-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kawaii-tag {
+    background: #FF9052;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .kawaii-name {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 120px;
+    color: #3D1F0A;
+    line-height: 0.85;
+    letter-spacing: -3px;
+  }
+
+  .kawaii-name span {
+    color: #C4703A;
+  }
+
+  .kawaii-amp {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 90px;
+    color: #E8A84C;
+    line-height: 1;
+    display: block;
+  }
+
+  .kawaii-tagline {
+    font-family: 'Caveat', cursive;
+    font-size: 34px;
+    color: #5C3310;
+    margin: 20px 0 28px;
+    font-weight: 600;
+  }
+
+  .kawaii-pills {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .kawaii-pill {
+    background: rgba(255,255,255,0.7);
+    border: 2px solid rgba(196,112,58,0.3);
+    color: #5C3310;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 100px;
+    backdrop-filter: blur(4px);
+  }
+
+  .kawaii-cta {
+    background: #3D1F0A;
+    color: #F5ECD7;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 52px;
+    border-radius: 100px;
+    box-shadow: 0 8px 24px rgba(61,31,10,0.3);
+  }
+
+  /* Stars */
+  .star {
+    position: absolute;
+    color: #E8A84C;
+    font-size: var(--s);
+    opacity: 0.6;
+  }
+
+  /* =========================================================
+     BANNER 3 — GRADIENT / BOLD TYPOGRAPHY
+     ========================================================= */
+  .banner-gradient {
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(135deg, #1A0A00 0%, #3D1500 30%, #7A3000 60%, #C4703A 85%, #E8A84C 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 90px;
+  }
+
+  .grad-glow-1 {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,168,76,0.25) 0%, transparent 70%);
+    bottom: -150px; right: -100px;
+  }
+
+  .grad-glow-2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,112,58,0.2) 0%, transparent 70%);
+    top: -100px; left: 200px;
+  }
+
+  .grad-lines {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 79px,
+      rgba(255,255,255,0.03) 79px,
+      rgba(255,255,255,0.03) 80px
+    );
+  }
+
+  .grad-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  .grad-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #E8A84C;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .grad-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #E8A84C;
+  }
+
+  .grad-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 148px;
+    font-weight: 900;
+    color: #FFF8F0;
+    line-height: 0.85;
+    letter-spacing: -6px;
+    margin-bottom: 0;
+  }
+
+  .grad-headline .accent {
+    color: #E8A84C;
+    font-style: italic;
+    display: block;
+    font-size: 96px;
+    letter-spacing: -3px;
+    line-height: 1;
+  }
+
+  .grad-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #E8A84C, transparent);
+    margin: 32px 0;
+  }
+
+  .grad-tagline {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: rgba(255,248,240,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+    max-width: 480px;
+    line-height: 1.5;
+    margin-bottom: 44px;
+  }
+
+  .grad-bottom {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .grad-cta {
+    background: #E8A84C;
+    color: #1A0A00;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px 44px;
+  }
+
+  .grad-social {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: rgba(255,248,240,0.4);
+    letter-spacing: 1px;
+  }
+
+  /* Large decorative number */
+  .grad-deco-num {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 480px;
+    color: rgba(255,255,255,0.025);
+    line-height: 1;
+    user-select: none;
+  }
+
+  /* Cookie ring decoration */
+  .grad-ring {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid rgba(232,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grad-ring::before {
+    content: '';
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgba(232,168,76,0.15);
+  }
+
+  /* =========================================================
+     RESPONSIVE SHOWCASE WRAPPER
+     ========================================================= */
+  .banner-wrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  }
+
+  .banner-wrapper > * {
+    transform-origin: top left;
+    transform: scale(var(--scale, 1));
+  }
+</style>
+</head>
+<body>
+
+<p class="page-title">Cookie & Co. — 3 opções de banner Instagram 1080×1080</p>
+
+<!-- ============================================================
+     OPÇÃO 1 — RETRO / VINTAGE
+     ============================================================ -->
+<div class="banner-section">
+  <p class="banner-label">Opção 01 — <span>Retro / Vintage</span> — artesanal, afetivo, clássico</p>
+  <div class="banner-wrapper">
+    <div class="banner-retro">
+      <div class="retro-texture"></div>
+      <div class="retro-halftone tl"></div>
+      <div class="retro-halftone br"></div>
+      <div class="retro-border-outer"></div>
+      <div class="retro-border-inner"></div>
+      <div class="retro-corner tl"></div>
+      <div class="retro-corner tr"></div>
+      <div class="retro-corner bl"></div>
+      <div class="retro-corner br"></div>
+
+      <div class="retro-badge">Desde 2019</div>
+      <div class="retro-headline">
+        Cookie
+        <em>& Co.</em>
+      </div>
+      <div class="retro-divider">
+        <span class="retro-divider-icon">✦</span>
+      </div>
+      <div class="retro-tagline">Feito com amor, assado na hora</div>
+      <div class="retro-dots-row">
+        <div class="retro-dot active"></div>
+        <div class="retro-dot active"></div>
+        <div class="retro-dot"></div>
+        <div class="retro-dot active"></div>
+        <div class="retro-dot active"></div>
+      </div>
+      <div class="retro-cta">Peça o seu</div>
+      <div class="retro-footnote">@cookieandco • encomendas abertas</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     OPÇÃO 2 — ILLUSTRATED / KAWAII
+     ============================================================ -->
+<div class="banner-section">
+  <p class="banner-label">Opção 02 — <span>Illustrated / Playful</span> — divertido, jovem, afetivo</p>
+  <div class="banner-wrapper">
+    <div class="banner-kawaii">
+      <div class="kawaii-blob kawaii-blob-1"></div>
+      <div class="kawaii-blob kawaii-blob-2"></div>
+
+      <!-- Cookie illustrations -->
+      <div class="cookie-illustration ci-1">
+        <div class="cookie-chip chip-a"></div>
+        <div class="cookie-chip chip-b"></div>
+        <div class="cookie-chip chip-c"></div>
+        <div class="cookie-chip chip-d"></div>
+      </div>
+      <div class="cookie-illustration ci-2"></div>
+      <div class="cookie-illustration ci-3">
+        <div class="cookie-chip chip-a"></div>
+        <div class="cookie-chip chip-b"></div>
+        <div class="cookie-chip chip-c"></div>
+        <div class="cookie-chip chip-d"></div>
+        <div class="cookie-chip chip-e"></div>
+      </div>
+      <div class="cookie-illustration ci-4"></div>
+
+      <!-- Sprinkles -->
+      <div class="sprinkle" style="--r:45deg; width:24px;height:8px;background:#FF9052;top:160px;left:200px;opacity:0.5"></div>
+      <div class="sprinkle" style="--r:-30deg; width:18px;height:6px;background:#E8A84C;top:200px;right:220px;opacity:0.5"></div>
+      <div class="sprinkle" style="--r:60deg; width:20px;height:7px;background:#C4703A;bottom:220px;left:220px;opacity:0.4"></div>
+      <div class="sprinkle" style="--r:15deg; width:22px;height:7px;background:#FF9052;bottom:200px;right:200px;opacity:0.45"></div>
+      <div class="sprinkle" style="--r:-60deg; width:16px;height:6px;background:#3D1F0A;top:300px;left:150px;opacity:0.3"></div>
+      <div class="sprinkle" style="--r:80deg; width:20px;height:6px;background:#E8A84C;top:280px;right:160px;opacity:0.35"></div>
+
+      <!-- Stars -->
+      <div class="star" style="--s:28px; top:230px;left:170px;">✦</div>
+      <div class="star" style="--s:18px; top:240px;right:185px;">✦</div>
+      <div class="star" style="--s:22px; bottom:250px;left:185px;">✦</div>
+      <div class="star" style="--s:14px; bottom:260px;right:175px;">★</div>
+
+      <div class="kawaii-content">
+        <div class="kawaii-tag">🍪 Confeitaria Artesanal</div>
+        <div class="kawaii-name">
+          Cookie
+          <span class="kawaii-amp">&amp;</span>
+          Co.
+        </div>
+        <div class="kawaii-tagline">Feito com amor, assado na hora ✨</div>
+        <div class="kawaii-pills">
+          <div class="kawaii-pill">Chocolate Chips</div>
+          <div class="kawaii-pill">Red Velvet</div>
+          <div class="kawaii-pill">Brownie</div>
+          <div class="kawaii-pill">Nutella</div>
+        </div>
+        <div class="kawaii-cta">Peça o seu agora</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     OPÇÃO 3 — GRADIENT / BOLD TYPOGRAPHY
+     ============================================================ -->
+<div class="banner-section">
+  <p class="banner-label">Opção 03 — <span>Gradient / Bold Typography</span> — premium, sofisticado, moderno</p>
+  <div class="banner-wrapper">
+    <div class="banner-gradient">
+      <div class="grad-glow-1"></div>
+      <div class="grad-glow-2"></div>
+      <div class="grad-lines"></div>
+      <div class="grad-deco-num">C</div>
+
+      <div class="grad-ring"></div>
+
+      <div class="grad-content">
+        <div class="grad-eyebrow">Confeitaria Artesanal</div>
+        <div class="grad-headline">
+          Cookie
+          <span class="accent">&amp; Co.</span>
+        </div>
+        <div class="grad-divider"></div>
+        <div class="grad-tagline">Cada cookie é feito à mão, com ingredientes selecionados e assado na hora para você.</div>
+        <div class="grad-bottom">
+          <div class="grad-cta">Peça o seu</div>
+          <div class="grad-social">@cookieandco</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Responsive scaling — makes each 1080px banner fit the screen
+  function scalebanners() {
+    const wrappers = document.querySelectorAll('.banner-wrapper');
+    wrappers.forEach(wrapper => {
+      const w = wrapper.clientWidth;
+      const scale = w / 1080;
+      const banner = wrapper.firstElementChild;
+      if (banner) banner.style.transform = `scale(${scale})`;
+      wrapper.style.height = (1080 * scale) + 'px';
+    });
+  }
+  scalebanners();
+  window.addEventListener('resize', scalebanners);
+</script>
+</body>
+</html>
