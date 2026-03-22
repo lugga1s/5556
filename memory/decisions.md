@@ -10,3 +10,8 @@
 **Alternatives rejected:** SQLite (no concurrent writes), MySQL (team unfamiliarity)
 -->
 
+## 2026-03-22 - Implement Persistent Memory System
+**Decision:** Use Stop hook to automatically update memory files at end of session
+**Reason:** Enable automatic context preservation across sessions without requiring explicit user action after each session
+**Alternatives rejected:** Manual updates per session (requires user to explicitly call memory update)
+
