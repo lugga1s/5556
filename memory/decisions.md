@@ -75,3 +75,41 @@
 - User is comfortable with this automated approach to memory persistence
 **Alternatives rejected:** N/A (validation only)
 
+## 2026-03-22 - Explain Web vs Local Skill Availability
+**Decision:** Clarified the differences between skill availability in web/sandbox environment versus local machine
+**Reason:** User wanted to understand why Skill Creator accessibility differs between environments and what control is available locally
+**Key points:**
+- Web environment: Fixed set of pre-installed skills (no ability to add/remove/modify)
+- Local machine: Full control with two scopes — Global (`~/.claude/skills/`) for all projects, and Project-specific (`.claude/skills/`) for individual repositories
+- Skill Creator in this project is in `.claude/skills/` (project-specific), not yet in `~/.claude/skills/` (global)
+**Alternatives rejected:** Provide incomplete explanation of scope differences
+
+## 2026-03-22 - Understand Feature Branch Strategy for Memory Persistence
+**Decision:** Explained that memory files on feature branch require PR approval to merge into main
+**Reason:** User wanted to understand whether memory file commits are automatic or require manual authorization
+**Key points:**
+- Commits currently go to branch `claude/add-memory-functionality-rK09g` (feature branch), not main
+- User would need to approve and merge Pull Request to integrate into main
+- Problem: if memory files stay on feature branch, future sessions may not find them depending on which branch is checked out
+- Ideal solution: merge feature branch into main once to stabilize memory structure, then commits go to main
+**Alternatives rejected:** Keep memory commits on feature branch indefinitely (causes availability issues)
+
+## 2026-03-22 - Explain Claude Code Visual Indicators
+**Decision:** Clarified meaning of `diff +3000` and `PR` indicators shown during response generation
+**Reason:** User asked what these visual indicators represent in Claude Code interface
+**Key points:**
+- `diff +3000`: represents the number of lines read/analyzed from files (context diff loaded)
+- `PR`: indicates prompt processing or response generation in progress (NOT related to Pull Requests)
+- These are internal metrics showing how much content is loaded into context for generating a response
+**Alternatives rejected:** Leave explanation vague
+
+## 2026-03-22 - Create PR for Memory Functionality Merge via Gitea API
+**Decision:** Use Gitea API to create Pull Request since `gh` CLI is not available in the environment
+**Reason:** Need to merge 13 commits from `claude/add-memory-functionality-rK09g` feature branch into `master` to make persistent memory functionality permanent; `gh` command not available in this environment
+**Key points:**
+- Feature branch contains: CLAUDE.md instructions, memory/ directory (user.md, preferences.md, decisions.md, people.md), and skill-creator
+- 13 commits total ready to merge from feature branch to master
+- Gitea API provides alternative to GitHub CLI for creating PRs
+- Without merge, memory files only exist on feature branch and won't be accessible in future sessions starting from master
+**Alternatives rejected:** Keep changes only on feature branch (causes memory unavailability in future sessions)
+

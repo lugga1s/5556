@@ -44,4 +44,10 @@
 - Curious about differences in skill availability between web/sandbox environment vs. local machine
 - Interested in understanding skill scopes: global (`~/.claude/skills/`) vs. project-specific (`.claude/skills/`)
 - Actively explores and discovers system features (e.g., discovered persistent memory system and asked clarifying questions about how it works)
+- Interested in Git workflow and PR approval processes for feature branches
+- Values understanding the relationship between branch strategy and memory/persistence in feature branches
+- Curious about Claude Code visual indicators (e.g., `diff +3000`, `PR`) and what they represent in context processing
+- Interested in understanding internal metrics of token/context usage during response generation
+- Aware that offline PC affects ability to copy/sync files locally to global scopes
+- Interested in using Gitea API for creating PRs when `gh` CLI is not available
 
