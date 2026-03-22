@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "agent",
+            "statusMessage": "Updating memory files...",
+            "timeout": 60,
+            "prompt": "Review this session and update the persistent memory files in the memory/ directory. Follow these rules:\n\n1. Read all four files first: memory/user.md, memory/preferences.md, memory/decisions.md, memory/people.md\n2. Review the conversation that just occurred\n3. Update each file with any NEW information learned — do not remove existing entries\n   - memory/user.md: new facts about the user (identity, role, background, goals, working style)\n   - memory/preferences.md: new preferences expressed or inferred (tools, languages, style)\n   - memory/decisions.md: any decisions made (format: ## YYYY-MM-DD - Title, with decision, reason, alternatives)\n   - memory/people.md: any new people mentioned (name, role, relevant details)\n4. Only write to a file if there is genuinely new information to add\n5. Keep entries concise and factual"
+          }
+        ]
+      }
+    ]
+  }
+}
