@@ -40,3 +40,14 @@
 **Reason:** Understand user's exact needs regarding idea format, project structure, storage location, fields/metadata, output format, and natural language triggers
 **Alternatives rejected:** Begin implementation with assumptions about user workflow and requirements
 
+## 2026-03-22 - Make Skill Creator Available Globally
+**Decision:** Plan to copy Skill Creator from project-local to global installation (`~/.claude/skills/skill-creator/`)
+**Reason:** Enable access to Skill Creator across all projects and sessions, not just in this specific repository
+**Alternatives rejected:** Keep Skill Creator project-local only (less convenient for general skill development)
+
+## 2026-03-22 - Conduct Detailed Requirements Interview for Idea-Capture Skill
+**Decision:** Ask user 5 structured categories of questions before implementing the idea-capture skill
+**Reason:** Gather precise requirements about idea format, project organization, storage, output preferences, and natural language triggers to ensure the skill matches actual workflow
+**Categories explored:** (1) Idea format, (2) Project definition, (3) Storage location, (4) Output preferences, (5) Trigger phrasing
+**Alternatives rejected:** Implement based on assumptions about user workflow
+
