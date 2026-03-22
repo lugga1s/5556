@@ -113,3 +113,9 @@
 - Without merge, memory files only exist on feature branch and won't be accessible in future sessions starting from master
 **Alternatives rejected:** Keep changes only on feature branch (causes memory unavailability in future sessions)
 
+## 2026-03-22 - Explain Git Branch Strategy with Metaphor
+**Decision:** Explained Git feature branches using analogy of file cabinet with drawers
+**Reason:** User requested layperson-friendly explanation of why memory files on feature branch need PR approval
+**Key metaphor:** Git = physical file cabinet; `master` = main drawer (official project); `claude/add-memory-functionality-rK09g` = separate drawer (work-in-progress); PR = formal request to move content from separate drawer to main
+**Alternatives rejected:** Technical jargon explanation
+

@@ -50,4 +50,5 @@
 - Interested in understanding internal metrics of token/context usage during response generation
 - Aware that offline PC affects ability to copy/sync files locally to global scopes
 - Interested in using Gitea API for creating PRs when `gh` CLI is not available
+- Prefers practical explanations using metaphors (e.g., Git as physical file cabinet with drawers for branches)
 
