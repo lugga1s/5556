@@ -20,3 +20,13 @@
 **Reason:** Provide seamless context preservation without requiring user to manually trigger updates between sessions
 **Alternatives rejected:** Manual trigger at session end (requires explicit user action); continuous sync (too frequent)
 
+## 2026-03-22 - Clarify Memory Update Triggering Behavior
+**Decision:** Memory updates are triggered by explicit user request or via Stop hook at session end
+**Reason:** User wanted to understand whether memory updates happen automatically across sessions or require explicit action each time
+**Alternatives rejected:** Completely manual (less convenient); Always automatic without user awareness (lacks transparency)
+
+## 2026-03-22 - Install Skill Creator in Repository
+**Decision:** Install Anthropic's Skill Creator as a custom skill in `.claude/skills/skill-creator/`
+**Reason:** Enable the ability to create and iterate on new Claude skills from within the repository; provides tooling for skill development workflow (intent capture, testing, evaluation, iteration)
+**Alternatives rejected:** Using external skills repository only (less convenient for local development)
+

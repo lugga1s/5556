@@ -20,4 +20,7 @@
 - Curious about end-of-session triggers and what causes automatic updates
 - Values understanding the **why** behind system behavior before implementation details
 - Interested in learning filtering criteria for what constitutes persistent vs. contextual information
+- Wants to understand the assistant's filtering logic for what information should be persisted
+- Interested in skill creation and Claude Code extensibility (reviewed Skill Creator documentation)
+- Active in installing and setting up development tools in the repository (.claude/skills/ structure)
 

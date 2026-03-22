@@ -9,10 +9,12 @@
 
 
 ## Goals
-
+- Extend Claude Code capabilities through custom skill development
 
 ## Working Style
-
+- Active with setting up development infrastructure and tooling
+- Interested in understanding and implementing advanced features
+- Works with Claude Code for automated development tasks
 
 ## Personal
 
