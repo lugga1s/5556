@@ -12,6 +12,11 @@
 - Extend Claude Code capabilities through custom skill development
 - Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill)
 
+## Future Skill Projects
+- `/session-summary` — resumo estruturado do que foi feito em cada sessão
+- `/project-context` — carrega contexto de um projeto específico rapidamente
+- `/decisions` — registra uma decisão diretamente nos memory files
+
 ## Working Style
 - Active with setting up development infrastructure and tooling
 - Interested in understanding and implementing advanced features
