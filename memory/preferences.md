@@ -12,6 +12,8 @@
 ## Tools & Technologies
 - Uses GitHub/Git for version control
 - Works with Claude Code CLI
+- Installs and integrates design skills (ui-ux-pro-max-skill from GitHub)
+- Interested in comprehensive design systems with multiple specialized skills
 
 ## Code Style
 
@@ -52,4 +54,5 @@
 - Interested in using Gitea API for creating PRs when `gh` CLI is not available
 - Prefers practical explanations using metaphors (e.g., Git as physical file cabinet with drawers for branches)
 - Appreciates layered explanations: technical details + layperson analogies for understanding complex concepts
+- Interested in design capabilities and UI/UX professional tools (inquired about acquiring ui-ux-pro-max-skill)
 

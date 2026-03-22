@@ -11,6 +11,7 @@
 ## Goals
 - Extend Claude Code capabilities through custom skill development
 - Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill)
+- Build a comprehensive design system and UI/UX capability for the project (installed ui-ux-pro-max-skill)
 
 ## Working Style
 - Active with setting up development infrastructure and tooling
@@ -28,4 +29,6 @@
 - Interested in building AI-assisted development skills and automation workflows
 - Active learner who inquires deeply about system mechanics before using tools
 - Works in a cloud/sandbox environment (local PC sometimes offline, can't always sync files locally)
+- Tests persistent memory system between sessions ("então agora você tem memória, o que lembra?")
+- Actively acquires and installs design tools/skills to extend project capabilities
 
