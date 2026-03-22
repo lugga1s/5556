@@ -140,6 +140,15 @@
 - Confirmed repository uses `master` as primary branch
 **Alternatives rejected:** Keep memory system isolated on feature branch (would cause memory unavailability in future sessions)
 
+## 2026-03-22 - Plan Three Priority Skill Projects
+**Decision:** Define three future skill projects as next priorities for Claude Code capability extension
+**Skills planned:**
+1. `/session-summary` — generate structured session summaries (o que foi feito em cada sessão)
+2. `/project-context` — quickly load project-specific context (carrega contexto de um projeto específico)
+3. `/decisions` — directly log decisions to memory files (registra uma decisão diretamente nos memory files)
+**Reason:** These skills address key workflow needs: understanding what was accomplished in sessions, quickly contextualizing new work on projects, and capturing decisions without manual memory file editing
+**Alternatives rejected:** Focus on single skill; defer planning until later
+
 ## 2026-03-22 - Define Next Steps After PR Merge
 **Decision:** Present user with prioritized options for next phase of development (idea-capture skill implementation vs other improvements)
 **Reason:** PR successfully merged to master, completing foundation work. Need to clarify which direction user wants to pursue
