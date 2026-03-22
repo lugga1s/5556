@@ -16,4 +16,8 @@
 ## Other Preferences
 - Interested in understanding automation and when memory updates happen automatically
 - Prefers to understand system behavior and configuration (asking about Stop hook and auto-registration)
+- Appreciates learning how the Stop hook and persistent memory system work
+- Curious about end-of-session triggers and what causes automatic updates
+- Values understanding the **why** behind system behavior before implementation details
+- Interested in learning filtering criteria for what constitutes persistent vs. contextual information
 

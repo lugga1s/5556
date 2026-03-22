@@ -15,3 +15,8 @@
 **Reason:** Enable automatic context preservation across sessions without requiring explicit user action after each session
 **Alternatives rejected:** Manual updates per session (requires user to explicitly call memory update)
 
+## 2026-03-22 - Enable Automatic Memory Updates via Stop Hook
+**Decision:** Configure Stop hook to trigger memory file updates when session ends
+**Reason:** Provide seamless context preservation without requiring user to manually trigger updates between sessions
+**Alternatives rejected:** Manual trigger at session end (requires explicit user action); continuous sync (too frequent)
+
