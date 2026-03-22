@@ -30,3 +30,8 @@
 **Reason:** Enable the ability to create and iterate on new Claude skills from within the repository; provides tooling for skill development workflow (intent capture, testing, evaluation, iteration)
 **Alternatives rejected:** Using external skills repository only (less convenient for local development)
 
+## 2026-03-22 - Focus on Claude Code Skills System
+**Decision:** Research and understand Claude Code Skills (SKILL.md format), real-world use cases, and best practices
+**Reason:** Evaluate potential for creating custom skills to extend Claude Code capabilities; understand enterprise adoption patterns and business impact
+**Alternatives rejected:** Focus solely on default Claude Code features without customization
+

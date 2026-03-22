@@ -23,4 +23,6 @@
 - Wants to understand the assistant's filtering logic for what information should be persisted
 - Interested in skill creation and Claude Code extensibility (reviewed Skill Creator documentation)
 - Active in installing and setting up development tools in the repository (.claude/skills/ structure)
+- Interested in understanding Claude Code Skills system (SKILL.md format, triggering mechanisms, real-world applications)
+- Values learning about enterprise use cases and business impact analysis of AI tools
 
