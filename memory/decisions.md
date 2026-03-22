@@ -51,3 +51,9 @@
 **Categories explored:** (1) Idea format, (2) Project definition, (3) Storage location, (4) Output preferences, (5) Trigger phrasing
 **Alternatives rejected:** Implement based on assumptions about user workflow
 
+## 2026-03-22 - Understand Skill Creator Benefit Model
+**Decision:** Clarified why Skill Creator makes skill creation easier and what minimum context is needed to invoke it
+**Reason:** User wanted to understand the practical value of using Skill Creator vs manual skill development
+**Key points:** Skill Creator handles: question framework, test case generation, parallel testing, browser-based feedback loop, trigger optimization. Minimum context needed: "what the skill does", "when it should trigger", "expected output", "edge cases to avoid"
+**Alternatives rejected:** Leave explanation vague
+

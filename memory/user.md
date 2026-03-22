@@ -10,7 +10,7 @@
 
 ## Goals
 - Extend Claude Code capabilities through custom skill development
-- Create a custom skill for capturing and organizing ideas across projects
+- Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill)
 
 ## Working Style
 - Active with setting up development infrastructure and tooling
