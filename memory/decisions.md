@@ -119,3 +119,24 @@
 **Key metaphor:** Git = physical file cabinet; `master` = main drawer (official project); `claude/add-memory-functionality-rK09g` = separate drawer (work-in-progress); PR = formal request to move content from separate drawer to main
 **Alternatives rejected:** Technical jargon explanation
 
+## 2026-03-22 - Clarify main vs master Branch Names
+**Decision:** Explained difference between `main` and `master` branch names and confirmed repository uses `master`
+**Reason:** User asked about differences between `main` and `master`
+**Key points:**
+- `main` and `master` are functionally the same — both are default/primary branches
+- `main` is the newer naming convention (adopted ~2020) by GitHub to avoid problematic terminology
+- `master` is the older/historical default from Git
+- This repository uses `master` as the primary branch, not `main`
+- User has confirmed understanding of branch strategy and is ready to merge feature branch to `master`
+**Alternatives rejected:** Leave terminology confusion unresolved
+
+## 2026-03-22 - Create PR via Gitea API for Feature Branch Merge to Master
+**Decision:** Use Gitea API to create Pull Request for merging `claude/add-memory-functionality-rK09g` feature branch to `master`
+**Reason:** `gh` CLI not available in sandbox environment; need to merge 13 commits containing memory system, CLAUDE.md instructions, and skill-creator to master branch to ensure memory persistence across future sessions
+**Key points:**
+- 13 commits ready to merge from feature branch to master
+- Gitea API provides alternative to GitHub CLI for PR creation
+- User understands that PR merge to master is essential for memory system to work in future sessions
+- Confirmed repository uses `master` as primary branch
+**Alternatives rejected:** Keep memory system isolated on feature branch (would cause memory unavailability in future sessions)
+
