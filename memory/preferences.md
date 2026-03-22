@@ -41,4 +41,6 @@
 - Prefers understanding enterprise patterns (e.g., TELUS 13k skills, Rakuten 12.5M line codebase)
 - Interested in understanding the ease/benefit of using Skill Creator to build new skills
 - Wants to understand minimum context required to effectively use Skill Creator for new skill development
+- Curious about differences in skill availability between web/sandbox environment vs. local machine
+- Interested in understanding skill scopes: global (`~/.claude/skills/`) vs. project-specific (`.claude/skills/`)
 

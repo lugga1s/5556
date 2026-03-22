@@ -57,3 +57,12 @@
 **Key points:** Skill Creator handles: question framework, test case generation, parallel testing, browser-based feedback loop, trigger optimization. Minimum context needed: "what the skill does", "when it should trigger", "expected output", "edge cases to avoid"
 **Alternatives rejected:** Leave explanation vague
 
+## 2026-03-22 - Understand Skill Availability in Different Environments
+**Decision:** Explained differences between skill availability in web/sandbox environment vs. local machine
+**Reason:** User wanted to understand why Skill Creator accessibility differs between environments and what control is available locally
+**Key points:**
+- Web environment (here): Fixed set of pre-installed skills (`update-config`, `keybindings-help`, `simplify`, `loop`, `claude-api`, `session-start-hook`, `skill-creator`); no ability to add/remove/modify
+- Local machine: Full control with two scopes — Global (`~/.claude/skills/`) for all projects, and Project-specific (`.claude/skills/`) for individual repositories
+- Local: Can create custom skills, modify existing ones, install community skills, full extensibility
+**Alternatives rejected:** Provide incomplete explanation of scope differences
+
