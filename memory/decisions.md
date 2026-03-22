@@ -35,3 +35,8 @@
 **Reason:** Evaluate potential for creating custom skills to extend Claude Code capabilities; understand enterprise adoption patterns and business impact
 **Alternatives rejected:** Focus solely on default Claude Code features without customization
 
+## 2026-03-22 - Design Idea Capture Skill
+**Decision:** Conduct requirements discovery through structured interview before implementing idea capture skill
+**Reason:** Understand user's exact needs regarding idea format, project structure, storage location, fields/metadata, output format, and natural language triggers
+**Alternatives rejected:** Begin implementation with assumptions about user workflow and requirements
+

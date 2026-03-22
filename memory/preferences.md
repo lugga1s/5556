@@ -25,4 +25,6 @@
 - Active in installing and setting up development tools in the repository (.claude/skills/ structure)
 - Interested in understanding Claude Code Skills system (SKILL.md format, triggering mechanisms, real-world applications)
 - Values learning about enterprise use cases and business impact analysis of AI tools
+- Interested in creating a custom skill for capturing/managing ideas with project organization
+- Prefers asking clarifying questions before implementing features (seeks detailed requirements)
 
