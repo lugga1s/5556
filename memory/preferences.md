@@ -16,6 +16,9 @@
 - Interested in comprehensive design systems with multiple specialized skills
 - Successfully installed 7 design-related skills: ui-ux-pro-max, design, design-system, ui-styling, banner-design, brand, slides
 - Now has 8 total custom skills in project (skill-creator + 7 design skills)
+- Actively using banner-design skill for client projects (creates responsive HTML banners with multiple style variations)
+- Prefers banner showcase format: multiple design variations (3+) with distinct visual personalities presented in HTML with viewport adaptation
+- Appreciates local HTTP server option for viewing HTML deliverables in browser (alternative to artifacts when working with Claude Code CLI)
 
 ## Code Style
 

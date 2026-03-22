@@ -190,3 +190,24 @@
 - Skills provide ready-made intelligence for color selection, typography, UX patterns, component design, branding, presentations
 **Alternatives rejected:** N/A (exploratory phase initiated)
 
+## 2026-03-22 - Create Banner Showcase for Cookie & Co. Client Project
+**Decision:** Create 3 banner design variations for "Cookie & Co." client project using banner-design skill
+**Reason:** Put newly installed design skills into practical use; create client deliverables with multiple style options
+**Key points:**
+- Created responsive HTML banner showcase: `/assets/banners/cookie-co/showcase.html`
+- 3 design variations: (1) Retro/Vintage with decorative borders and serif typography, (2) Illustrated/Playful with CSS animations and organic shapes, (3) Gradient/Bold Typography with premium aesthetic
+- Followed banner-design skill rules: critical content in 70-80% safe zone, max 2 fonts, contrast ≥ 4.5:1, one CTA per banner
+- All banners are responsive and adapt to any screen width
+- Deliverable format: single HTML file with showcased variations, ready for client review
+**Alternatives rejected:** Static image deliverables (HTML provides better interactivity and responsiveness)
+
+## 2026-03-22 - Clarify Claude Code Artifact Limitations vs Interactive Preview
+**Decision:** Explained that Claude Code (CLI) cannot create interactive artifacts like Claude.ai (web) but offers local HTTP server as alternative
+**Reason:** User asked about viewing interactive artifact previews; needed to clarify platform differences
+**Key points:**
+- Claude.ai web interface: Can render interactive artifacts directly in browser
+- Claude Code CLI: Output limited to text, files, and code — cannot render interactive browser artifacts
+- Alternative solutions: (1) Open HTML files directly in browser manually, (2) Start local HTTP server to serve files and view via `localhost`
+- File already created and ready to open: `/home/user/5556/assets/banners/cookie-co/showcase.html`
+**Alternatives rejected:** N/A (clarification of platform capabilities only)
+

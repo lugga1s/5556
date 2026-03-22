@@ -34,4 +34,9 @@
 - Verified persistent memory system works across sessions (memory files persisted correctly and were accessible in subsequent session)
 - Successfully acquired and installed ui-ux-pro-max-skill (7 design skills) from nextlevelbuilder GitHub repository
 - Ready to explore new design capabilities and incorporate them into future work
+- Active in creating client design projects (e.g., "Cookie & Co." banner designs) using the banner-design skill
+- Organizes design assets in project structure (`assets/banners/[client-name]/`)
+- Working on design variations and style exploration (retro/vintage, illustrated/playful, gradient/bold typography)
+- Understands differences between Claude.ai (web) interactive artifacts and Claude Code (CLI) capabilities
+- Uses Portuguese language for short commands (e.g., "abre" for "open")
 
