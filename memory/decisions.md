@@ -140,3 +140,29 @@
 - Confirmed repository uses `master` as primary branch
 **Alternatives rejected:** Keep memory system isolated on feature branch (would cause memory unavailability in future sessions)
 
+## 2026-03-24 - Create Bahiarides Idea Capture Directory Structure
+**Decision:** Created structured directory `/bahiarides/` with four category-specific markdown files for capturing and organizing project ideas
+**Reason:** User wanted a simple, working idea capture system for the Bahiarides project before implementing a full custom skill; this provides immediate utility with low friction
+**Structure created:**
+- `bahiarides/seo.md` — SEO-related ideas (schema markup, optimization, etc.)
+- `bahiarides/tools.md` — Tools and integrations (analytics, testing, etc.)
+- `bahiarides/copywriting.md` — Copy and messaging ideas (CTAs, messaging, etc.)
+- `bahiarides/code.md` — Development and code ideas
+**Natural language trigger pattern:** User can phrase requests like "anota no seo: [idea]", "salva no copywriting: [idea]", "adiciona no tools: [idea]"
+**Workflow:** User mentions idea + category → Assistant adds with timestamp → Saves to appropriate markdown file
+**Alternatives rejected:** Skip to custom skill implementation (has too much uncertainty without user testing); wait for full requirements analysis
+
+## 2026-03-24 - Implement Bahiarides Idea Capture Flow in CLAUDE.md
+**Decision:** Configured CLAUDE.md with an interactive idea capture workflow where assistant offers research before saving to category files
+**Reason:** Provides a practical, low-friction system for capturing and organizing ideas in Portuguese, with flexibility to research first or save directly
+**Workflow implemented:**
+- When user mentions any idea, concept, or tool related to bahiarides, assistant asks: "Quer que eu pesquise sobre [X] e traga algo relevante para o bahiarides? Ou prefere só salvar / seguir normalmente?"
+- User can choose: research first, save without research, or ignore
+- Ideas saved to appropriate category file (seo.md, tools.md, copywriting.md, code.md) with timestamp
+**Key features:**
+- Portuguese language for naturalness and ease of use
+- Optional research step for richer context
+- Quick save option for capturing rapid ideas
+- Maintains flexibility based on user's immediate needs
+**Alternatives rejected:** Automatic research (slows workflow); no research option (misses enrichment opportunity)
+

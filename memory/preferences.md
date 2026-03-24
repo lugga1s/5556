@@ -52,4 +52,8 @@
 - Interested in using Gitea API for creating PRs when `gh` CLI is not available
 - Prefers practical explanations using metaphors (e.g., Git as physical file cabinet with drawers for branches)
 - Appreciates layered explanations: technical details + layperson analogies for understanding complex concepts
+- Prefers using Portuguese (Brazilian) for idea capture triggers and annotations (e.g., "anota no seo:", "salva no copywriting:")
+- Wants simple, low-friction idea capture workflow: natural language → quick addition to category file with timestamp
+- Appreciates flexibility in idea capture: option to research first or save directly based on context
+- Prefers being asked before research is conducted on ideas (respects decision-making in the moment)
 

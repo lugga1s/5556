@@ -11,6 +11,7 @@
 ## Goals
 - Extend Claude Code capabilities through custom skill development
 - Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill)
+- Create a structured repository for organizing ideas for the "Bahiarides" project (ride-sharing/transportation related)
 
 ## Working Style
 - Active with setting up development infrastructure and tooling
@@ -21,6 +22,8 @@
 - Values understanding the full lifecycle of features (creation, testing, iteration, optimization)
 - Deeply inquisitive about system mechanics before using tools — asks clarifying questions about why certain features work the way they do
 - Prefers understanding the architecture and constraints before deciding on implementation approach
+- Favors iterative, practical implementations over perfect planning (creates working idea capture system first, custom skill later after user testing)
+- Appreciates having flexibility and choice in workflows (research or save directly, not prescriptive automation)
 
 ## Personal
 
