@@ -166,3 +166,28 @@
 - Maintains flexibility based on user's immediate needs
 **Alternatives rejected:** Automatic research (slows workflow); no research option (misses enrichment opportunity)
 
+## 2026-03-24 - Discover Gap in Memory System: Automatic Context Loading
+**Decision:** Identified critical issue: CLAUDE.md instructs assistant to read memory files at session start, but this doesn't happen automatically without explicit user request
+**Reason:** User started new session and discovered assistant had no context from previous sessions, despite memory files existing in the repository
+**Key findings:**
+- Memory files exist: memory/user.md, memory/preferences.md, memory/decisions.md, memory/people.md
+- CLAUDE.md has instructions for assistant to read them at session start, but assistant doesn't automatically do this
+- Current behavior is fragile: depends on assistant remembering to read files without explicit user cue
+- Root cause: No SessionStart hook configured to automatically inject memory context into session
+**Proposed solution:** Configure SessionStart hook to automatically read and inject memory file contents at session initialization
+**Two approaches discussed:**
+1. SessionStart hook (reliable, automatic, recommended)
+2. Manual reading at session start (requires user to explicitly request, fragile)
+**Alternatives rejected:** Keeping manual behavior (unreliable context persistence)
+
+## 2026-03-24 - Add Confirmation-Based Idea Capture to CLAUDE.md
+**Decision:** Implement bahiarides idea capture workflow in CLAUDE.md with confirmation dialog before saving
+**Reason:** User wants automatic idea identification (SEO, tools, copywriting, code categories) but with confirmation before saving to avoid unintended registrations
+**Approach:** When user mentions an idea that fits one of the four categories, Claude should:
+1. Identify the category by content nature
+2. Ask for confirmation: "Isso parece uma ideia de [categoria] para o bahiarides. Salvo em `bahiarides/[arquivo].md`?"
+3. Only save if user confirms; discard silently if denied
+4. If category is ambiguous, ask which category before proposing save
+**Categories:** SEO, tools, copywriting, code
+**Alternatives rejected:** Silent automatic saving (risky, could save unintended content); no automatic identification (requires manual category selection each time)
+

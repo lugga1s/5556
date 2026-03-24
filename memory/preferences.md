@@ -56,4 +56,7 @@
 - Wants simple, low-friction idea capture workflow: natural language → quick addition to category file with timestamp
 - Appreciates flexibility in idea capture: option to research first or save directly based on context
 - Prefers being asked before research is conducted on ideas (respects decision-making in the moment)
+- Interested in understanding how persistent memory system actually works across sessions (discovered that memory files aren't automatically read at session start)
+- Concerned about memory persistence and wants reliable automatic context loading mechanism
+- Prefers confirmation dialogs before automatic actions (e.g., idea capture should ask before saving, not save silently)
 
