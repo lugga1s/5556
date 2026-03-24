@@ -11,6 +11,7 @@
 ## Goals
 - Extend Claude Code capabilities through custom skill development
 - Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill)
+- Working on a feature/project called "Bahiarides" (details TBD)
 
 ## Working Style
 - Active with setting up development infrastructure and tooling
