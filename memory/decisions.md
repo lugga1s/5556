@@ -149,3 +149,12 @@
 - User will provide project context in next interaction
 **Alternatives rejected:** N/A (information gathering)
 
+## 2026-03-24 - Verify Persistent Memory System Functionality
+**Decision:** User tested persistent memory system by requesting context recall of Bahiarides project
+**Reason:** User asked "você lembra do Bahiarides?" to verify that assistant successfully retrieves previously stored context from memory files across sessions
+**Key points:**
+- Memory system is working correctly — assistant successfully loaded and summarized all memory file contents
+- User satisfied that previous session context (Bahiarides decision, project goals) was properly persisted and accessible
+- Demonstrated that Stop hook and persistent memory system successfully preserve context across session boundaries
+**Alternatives rejected:** N/A (testing/verification)
+
