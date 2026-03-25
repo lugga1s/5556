@@ -1,50 +1,97 @@
 ---
 name: grabb
-description: Capture and save ideas to project-specific markdown files. Trigger when user runs /grabb, or says things like "anota essa ideia", "salva isso", "grava essa ideia", "ideia:", "grab this", "capture this idea". Always ask clarifying questions before saving.
+description: Capture and save ideas to project-specific markdown files. Trigger when user runs /grabb, /grabb list, /grabb search, /grabb done, /grabb review, or says things like "anota essa ideia", "salva isso", "grava essa ideia", "ideia:", "grab this", "capture this idea". Always ask clarifying questions before saving (unless in quick mode).
 ---
 
-# Grabb — Idea Capture Skill
+# Grabb — Sistema de Captura de Ideias
 
-Captura ideias do usuário e salva em arquivos markdown organizados por projeto em `ideas/`.
+Captura ideias e as organiza em arquivos markdown por projeto em `ideas/`. Suporta múltiplos comandos, dois modos de captura, templates por tipo e status tracking.
 
-## Comportamento
+---
 
-Quando ativado (via `/grabb` ou linguagem natural), siga **sempre** este fluxo:
+## Comandos disponíveis
 
-### 1. Extrair ideia inicial
+| Comando | Função |
+|---|---|
+| `/grabb` | Capturar nova ideia |
+| `/grabb list [projeto]` | Listar ideias de um projeto (ou todos os projetos) |
+| `/grabb search <termo>` | Buscar em todos os arquivos de `ideas/` |
+| `/grabb done <título>` | Marcar uma ideia como implementada |
+| `/grabb review` | Exibir todas as ideias com status `nova`, ordenadas por prioridade |
 
-Se o usuário já passou uma ideia junto com o comando (ex: `/grabb quero um componente de modal reutilizável`), use isso como ponto de partida. Caso contrário, peça para descrever a ideia brevemente.
+---
 
-### 2. Fazer perguntas de clarificação
+## Captura de ideia (`/grabb`)
 
-Sempre faça as seguintes perguntas antes de salvar (pode ser em uma mensagem só, de forma conversacional):
+### Detectar o modo automaticamente
 
-1. **Projeto**: A qual projeto essa ideia pertence? Liste os projetos existentes lendo os arquivos em `ideas/` e ofereça as opções. Permita criar um novo projeto.
-2. **Contexto**: Em que situação surgiu essa ideia? (ex: "estava implementando X e pensei em Y")
-3. **Prioridade**: É urgente, médio prazo, ou só uma ideia futura? (alta / média / baixa)
-4. **Já existe algo parecido?**: Pergunte brevemente se é algo novo ou uma melhoria de algo existente.
+Analise o contexto antes de perguntar:
 
-Se alguma resposta já estiver clara pelo contexto da conversa, não repita a pergunta — use o que já foi dito.
+- **Modo rápido**: ideia vaga, curta, sem contexto técnico (ex: pensou no banho, viu algo no Instagram, ideia do dia a dia). Pergunte apenas o projeto e salve com defaults.
+- **Modo completo**: ideia com contexto técnico ou detalhes (ex: componente específico, bug, arquitetura). Faça as perguntas de clarificação completas por tipo.
 
-### 3. Confirmar antes de salvar
+---
 
-Mostre um resumo formatado da ideia e pergunte: "Posso salvar assim?" Só salve após confirmação.
+### Modo Rápido
 
-### 4. Salvar em `ideas/<projeto>.md`
+1. Se o projeto não foi mencionado, pergunte: "Qual projeto? (ou 'geral' se não for específico)" — liste os projetos existentes em `ideas/`
+2. Confirme: "Posso salvar assim?" com título gerado automaticamente
+3. Salve com: tipo `geral`, prioridade `média`, status `nova`
 
-Formato de cada ideia no arquivo:
+---
 
-```markdown
-## [TÍTULO DA IDEIA]
-**Data:** YYYY-MM-DD
-**Prioridade:** alta | média | baixa
-**Contexto:** breve descrição de onde surgiu
-**Descrição:** descrição completa da ideia
-**Status:** nova
-```
+### Modo Completo
 
-Se o arquivo do projeto não existir, crie-o com um cabeçalho:
+**Passo 1 — Identificar tipo:**
+Pergunte ou infira o tipo da ideia:
+- `feature` — nova funcionalidade
+- `bug` — algo que está quebrado ou errado
+- `arquitetura` — mudança estrutural ou sistêmica
+- `refactor` — melhoria de código sem mudança de comportamento
+- `geral` — ideia não-técnica, inspiração, aprendizado
 
+**Passo 2 — Perguntas por tipo:**
+
+`feature`:
+- Qual componente ou área do sistema?
+- Qual o comportamento esperado?
+- Já existe algo parecido?
+
+`bug`:
+- O que está quebrando?
+- Quando acontece?
+- É blocker ou contornável?
+
+`arquitetura`:
+- Qual mudança sistêmica?
+- Quais os trade-offs?
+- O que motivou essa ideia?
+
+`refactor`:
+- O que refatorar?
+- Qual o ganho esperado?
+
+`geral`:
+- Onde surgiu essa ideia? (fonte)
+- Como se aplicaria a um projeto?
+- Qual projeto mais se beneficiaria?
+
+**Passo 3 — Prioridade:**
+Pergunte: alta / média / baixa
+
+**Passo 4 — Projeto:**
+Liste os projetos existentes em `ideas/` e permita criar novo. Sempre ofereça `geral` como opção.
+
+**Passo 5 — Confirmar:**
+Mostre um resumo formatado e pergunte: "Posso salvar assim?"
+
+---
+
+### Salvar a ideia
+
+Arquivo: `ideas/<projeto>.md` (nome em lowercase com hífen, ex: `ideas/frontend-mobile.md`)
+
+Se o arquivo não existir, crie com cabeçalho:
 ```markdown
 # Ideas — [Nome do Projeto]
 
@@ -52,21 +99,64 @@ Se o arquivo do projeto não existir, crie-o com um cabeçalho:
 
 ```
 
-Append a nova ideia ao final do arquivo.
+Formato de cada ideia:
+```markdown
+## [TÍTULO DA IDEIA]
+**Data:** YYYY-MM-DD
+**Tipo:** feature | bug | arquitetura | refactor | geral
+**Prioridade:** alta | média | baixa
+**Status:** nova
+**Contexto:** breve descrição de onde surgiu
+**Descrição:** descrição completa da ideia
+```
 
-### 5. Confirmar ao usuário
-
-Após salvar, mostre:
+Após salvar, confirme:
 - Arquivo onde foi salvo
 - Título da ideia
-- Número total de ideias no arquivo
+- Total de ideias no arquivo
 
 ---
 
-## Regras
+## Listar ideias (`/grabb list [projeto]`)
 
-- **Nunca salve sem confirmação do usuário**
-- **Sempre leia `ideas/` antes** para listar projetos existentes e evitar duplicatas de nome de arquivo
+- Se projeto especificado: leia `ideas/<projeto>.md` e exiba formatado
+- Se sem projeto: liste todos os arquivos em `ideas/` com contagem de ideias e breakdown por status
+- Formato: agrupado por status, ordenado por prioridade dentro de cada grupo
+
+---
+
+## Buscar (`/grabb search <termo>`)
+
+- Busque o termo em todos os arquivos `ideas/*.md`
+- Exiba cada match com: projeto, título da ideia, status, prioridade
+- Destaque o trecho onde o termo apareceu
+
+---
+
+## Marcar como implementada (`/grabb done <título>`)
+
+- Busque a ideia pelo título (busca parcial, case-insensitive) em todos os arquivos `ideas/`
+- Se encontrar mais de uma, liste e peça confirmação
+- Atualize o campo `**Status:**` de `nova` para `implementada`
+- Confirme a mudança ao usuário
+
+---
+
+## Revisar ideias pendentes (`/grabb review`)
+
+- Leia todos os arquivos `ideas/*.md`
+- Filtre apenas ideias com status `nova`
+- Agrupe por projeto
+- Ordene por prioridade: alta → média → baixa
+- Exiba de forma compacta: título, projeto, tipo, prioridade
+
+---
+
+## Regras gerais
+
+- **Nunca salve sem confirmação do usuário** (exceto modo rápido com confirmação explícita)
+- **Sempre leia `ideas/`** antes de qualquer operação para listar projetos existentes
 - Use português por padrão, mas responda no idioma do usuário
-- Títulos de arquivo: lowercase, sem espaços, com hífen (ex: `ideas/frontend-mobile.md`)
-- Se o usuário quiser listar ideias de um projeto, leia e exiba o arquivo correspondente de forma formatada
+- Nomes de arquivo: lowercase, sem espaços, com hífen
+- O projeto `geral` é o fallback para ideias sem projeto específico (`ideas/geral.md`)
+- Status possíveis: `nova` | `em progresso` | `implementada` | `descartada`
