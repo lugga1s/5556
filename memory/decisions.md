@@ -299,3 +299,21 @@
 - This would dramatically reduce token cost for idea-capture workflows
 **Status:** Analysis phase — awaiting user feedback before implementation
 **Alternatives rejected:** Implement changes without discussing optimization strategy first
+
+## 2026-03-26 - Detailed Analysis of Session Context Loading Inefficiency
+**Decision:** Conducted detailed analysis of how context is loaded during sessions to identify optimization opportunities
+**Reason:** User wanted to understand the actual cost (tool calls, tokens) of `/grabb` sessions and how CLAUDE.md instructions drive unnecessary context loading
+**Key findings:**
+- CLAUDE.md always instructs reading 4 memory files at session start: `memory/user.md`, `memory/preferences.md`, `memory/decisions.md`, `memory/people.md`
+- When `/grabb` skill is invoked, full repository exploration follows: 27 tool calls, ~45k tokens spent just on repository scanning
+- When user asks contextual questions (e.g., "tem referência ao bahiarides?"), additional heavy exploration is triggered unnecessarily
+- Current behavior: Memory files read first (before `/grabb` is even processed) → skill triggers → exploratory context loading → idea capture
+- Ideal behavior: Read only `memory/user.md` for project identification → proceed directly to idea capture workflow
+**Proposed solution:**
+- Create conditional instructions in CLAUDE.md: "When session initiated via `/grabb`, read only `memory/user.md` for project context. Skip other memory files and repository exploration unless explicitly requested."
+- This would reduce `/grabb` session cost from ~45k tokens to minimal footprint
+**Considerations:**
+- Stop hook behavior and how it determines which project to save ideas to (depends on context available in session)
+- When to allow full context loading (e.g., user asks for Bahiarides context: should it trigger exploration or use memory files?)
+**Status:** Analysis complete, proposed optimization strategy identified, awaiting final decision on implementation
+**Alternatives rejected:** Leave current behavior unchanged (wastes token budget on routine idea-capture workflows)

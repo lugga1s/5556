@@ -72,4 +72,6 @@
 - Interested in optimizing efficiency of sessions — wants to reduce unnecessary file reads and API calls
 - Prefers analyzing system behavior before making changes (requests discussion and analysis first, then implementation)
 - Concerned about token efficiency when using `/grabb` — doesn't want the entire repository to be read when only project context is needed
+- Values transparency about what context/files are loaded during sessions (wants to understand CLAUDE.md instructions impact)
+- Interested in conditional logic for CLAUDE.md instructions based on session trigger type (e.g., different behavior for `/grabb` vs regular sessions)
 
