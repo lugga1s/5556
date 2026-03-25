@@ -17,7 +17,7 @@ At the end of each session (triggered automatically by the Stop hook), update th
 
 - **user.md**: new facts about the user's identity, role, or working style
 - **preferences.md**: any new preferences expressed or inferred
-- **decisions.md**: decisions made during the session (with date and rationale)
+- **decisions.md**: real architectural/technical decisions with trade-offs (e.g. "chose X over Y because Z"). Do NOT record: explanations given to the user, Q&A about concepts, temporary states/statuses, or validations with no directional change
 - **people.md**: any new people mentioned, their roles and relevant details
 
 Only add new information — do not remove or rewrite existing entries unless correcting an error.
