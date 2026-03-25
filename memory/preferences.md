@@ -21,6 +21,8 @@
 - Prefers understanding the 3 skill creation patterns before building
 - Values having detailed requirements interviews before implementation
 - Interested in learning about trigger optimization and skill lifecycle
+- Uses `/grabb` skill actively for feature idea capture during development work
+- Integrates skill use into real project workflows
 
 ## Other Preferences
 - Interested in understanding automation and when memory updates happen automatically
@@ -67,4 +69,7 @@
 - Values dual-mode workflows: quick capture for ephemeral ideas, complete capture for structured technical ideas
 - Prefers adaptive questioning based on context (idea type, complexity, project)
 - Uses `/grabb` skill with natural language Portuguese triggers to capture feature ideas from projects
+- Interested in optimizing efficiency of sessions — wants to reduce unnecessary file reads and API calls
+- Prefers analyzing system behavior before making changes (requests discussion and analysis first, then implementation)
+- Concerned about token efficiency when using `/grabb` — doesn't want the entire repository to be read when only project context is needed
 

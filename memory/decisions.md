@@ -253,3 +253,49 @@
 **Status:** Paused awaiting user to initiate "serious conversation" about approach/strategy
 **Alternatives rejected:** Continue with technical requirements gathering without strategic alignment
 
+## 2026-03-25 - Discovered Repository Structure: Web Agency Workspace
+**Decision:** Clarified that `lugga1s/5556` is a web agency workspace with multiple clients, not a skill/feature-only repository
+**Reason:** User provided information about repository structure during Bahiarides feature discussion; confirmed agency model with clients in `clients/` directory
+**Key points:**
+- Repository contains multiple client projects: Bomdelle Confeitaria (HTML code complete), Bahiarides (in development, no code yet)
+- Structure: `clients/[client-name]/` directory organization for each client project
+- This is the agency's main workspace for web development projects
+- Bahiarides demand-capture pages are planned as part of Bahiarides client project development
+**Status:** Repository context clarified for future development planning
+**Alternatives rejected:** N/A (informational clarification)
+
+## 2026-03-25 - Test and Deploy `/grabb` Skill in Active Session
+**Decision:** `/grabb` skill tested in live session during Bahiarides feature idea capture
+**Reason:** Opportunity to use the newly implemented `/grabb` skill in a real workflow scenario
+**Key points:**
+- Skill functioned as designed: detected feature idea, asked clarifying questions, presented workflow
+- Demonstrated multi-question flow in Portuguese for feature clarification
+- Successfully captured initial requirements about bus/airport demand pages
+- Skill paused when user indicated need for strategic discussion before continuing
+**Status:** Skill validated and working in production
+**Alternatives rejected:** N/A (validation testing)
+
+## 2026-03-25 - Update Memory Files and Commit to Feature Branch
+**Decision:** Explicitly updated memory files with new information about agency structure and Bahiarides context
+**Reason:** End-of-session memory persistence to ensure agency workspace context is available in future sessions
+**Key points:**
+- User is running a web agency (not solo development)
+- Multiple clients managed with directory organization
+- Bahiarides is a client project (transportation/travel service) requiring demand-capture pages
+- Committed changes to feature branch `claude/bus-airport-demand-page-9AKhC`
+**Status:** Memory files updated and pushed to remote
+**Alternatives rejected:** Leave memory files without explicit agency context clarification
+
+## 2026-03-25 - Analyze Session Efficiency: `/grabb` Context Loading Strategy
+**Decision:** Identified inefficiency in how memory/context is loaded when `/grabb` skill is invoked
+**Reason:** User noticed that `/grabb` sessions trigger reading all 4 memory files + full repository exploration (~27 tool calls, 45k tokens) even when only minimal project context is needed
+**Key findings:**
+- Current CLAUDE.md instructs reading all 4 memory files at session start (reasonable for development sessions, problematic for `/grabb` idea capture)
+- When user asked exploratory question ("tem referência ao bahiarides?"), assistant launched heavy sub-agent exploration unnecessarily
+- `/grabb` sessions could be optimized to read only `memory/user.md` initially (to identify active project) instead of full memory dump
+**Proposed optimization:**
+- Add conditional instruction in CLAUDE.md: When session starts via `/grabb`, read only `memory/user.md` (for project context)
+- Skip reading other memory files and avoid full repository exploration unless explicitly asked
+- This would dramatically reduce token cost for idea-capture workflows
+**Status:** Analysis phase — awaiting user feedback before implementation
+**Alternatives rejected:** Implement changes without discussing optimization strategy first
