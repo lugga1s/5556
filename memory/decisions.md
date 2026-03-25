@@ -230,3 +230,28 @@
 **Status:** Committed to feature branch, ready for testing
 **Alternatives rejected:** Single capture mode (now provides flexibility for different idea types)
 
+## 2026-03-25 - Initiate Capture of First Idea: Bahiarides Baby Seat Feature
+**Decision:** User invoked `/grabb` skill to capture first idea for new "Bahiarides" project
+**Reason:** User is actively testing the `/grabb` skill they built and capturing real project ideas
+**Key details:**
+- **Project:** Bahiarides (new ride-sharing or transportation service)
+- **Idea:** Informar disponibilidade de cadeirinha para bebê nos carros (Inform availability of baby seats in cars)
+- **Type:** feature
+- **Priority:** média (medium)
+- **Status:** nova (new)
+- **Context:** First idea captured for Bahiarides project; skill is functioning as designed; user waiting for confirmation before save
+**Status:** Awaiting user confirmation to save to `ideas/bahiarides.md`
+**Alternatives rejected:** N/A (feature in use)
+
+## 2026-03-25 - Clarify Idea Type Classifications in `/grabb` Skill
+**Decision:** Explained all 5 idea type classifications available in `/grabb` skill with Bahiarides examples
+**Reason:** User asked for clarification on idea types (didn't understand the difference between feature, component, design, etc.)
+**Key details:**
+- **`feature`** — Nova funcionalidade para o usuário (new user-facing functionality); Ex: motoristas podem indicar que têm cadeirinha no carro
+- **`bug`** — Algo que está quebrado ou errado (broken/incorrect behavior); Ex: mapa não atualiza posição do motorista em tempo real
+- **`arquitetura`** — Mudança estrutural/sistêmica (system-level structural changes); Ex: migrar autenticação para JWT, separar serviço de pagamento em microserviço
+- **`refactor`** — Melhoria de código sem mudar comportamento (code improvement without changing user-visible behavior); Ex: reescrever módulo de rotas para reduzir duplicação
+- **`geral`** — Ideia não-técnica, inspiração, aprendizado (non-technical ideas, inspiration, learning); Ex: parceria com hotéis da Bahia, ideia de campanha de marketing
+- **Baby seat idea classification:** `feature` — because it's a new user-visible functionality (displaying availability info in app/site)
+**Alternatives rejected:** N/A (clarification/education only)
+

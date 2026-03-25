@@ -66,4 +66,7 @@
 - Appreciates iterative enhancement of skills based on refined requirements and feature requests
 - Values dual-mode workflows: quick capture for ephemeral ideas, complete capture for structured technical ideas
 - Prefers adaptive questioning based on context (idea type, complexity, project)
+- Actively uses `/grabb` skill for capturing project ideas (tested with Bahiarides project)
+- Appreciates detailed explanations of idea type classifications with project-specific examples
+- Prefers understanding the practical meaning of each idea type before committing ideas to storage
 
