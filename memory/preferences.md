@@ -69,4 +69,9 @@
 - Actively uses `/grabb` skill for capturing project ideas (tested with Bahiarides project)
 - Appreciates detailed explanations of idea type classifications with project-specific examples
 - Prefers understanding the practical meaning of each idea type before committing ideas to storage
+- Proactively tests new skills immediately after implementation (tested `/grabb` by capturing real Bahiarides project ideas)
+- Asks clarifying questions about idea classifications (feature vs. bug vs. arquitetura vs. refactor vs. geral) before confirming save
+- Values context efficiency: prefers keeping memory files focused on essential information, not conversation logs or Q&A
+- Proactively reviews and refines memory file structure to reduce noise and token waste across sessions
+- Uses plan mode and explicit guidelines to improve system metadata and decision-tracking processes
 

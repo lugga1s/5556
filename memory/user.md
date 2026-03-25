@@ -14,7 +14,7 @@
 - Iterate on skills based on usage feedback and requirements refinement
 - Continue expanding skill ecosystem based on workflow optimization
 - Build sophisticated idea management system supporting multiple idea types and lifecycle management
-- Develop Bahiarides project (ride-sharing or transportation platform for Bahia region with baby seat availability feature for riders with infants)
+- Develop Bahiarides project (ride-sharing or transportation platform for Bahia region with baby seat availability feature for riders with infants) — **IN PROGRESS, actively capturing ideas**
 
 ## Working Style
 - Active with setting up development infrastructure and tooling
@@ -27,6 +27,8 @@
 - Deeply inquisitive about system mechanics before using tools — asks clarifying questions about why certain features work the way they do
 - Prefers understanding the architecture and constraints before deciding on implementation approach
 - Follows up on planned work by checking memory files and resuming projects from previous sessions
+- Proactively maintains code and system cleanliness: reviews accumulated metadata, removes noise, clarifies guidelines for future work
+- Iterates on system processes and documentation to improve efficiency and clarity (e.g., refactoring memory file standards)
 
 ## Personal
 
