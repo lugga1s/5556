@@ -18,9 +18,11 @@
 - Works with Claude Code for automated development tasks
 - Conducts thorough requirements research before implementing features (researches business impact, real-world use cases, enterprise patterns)
 - Prefers structured interviews to capture requirements with clear categories and follow-up validation
+- Actively initiates requirements interviews for new features/skills using prepared question frameworks
 - Values understanding the full lifecycle of features (creation, testing, iteration, optimization)
 - Deeply inquisitive about system mechanics before using tools — asks clarifying questions about why certain features work the way they do
 - Prefers understanding the architecture and constraints before deciding on implementation approach
+- Follows up on planned work by checking memory files and resuming projects from previous sessions
 
 ## Personal
 

@@ -4,6 +4,7 @@
 
 ## Communication Style
 - Prefers Portuguese (Brazilian Portuguese) for conversation
+- Prefers Portuguese for technical discussions and requirements interviews (e.g., idea-capture skill design)
 - Asks clarifying questions about system behavior
 - Makes conceptual and reflexive questions about how systems work
 - Prefers understanding the "why" before the "how"
@@ -52,4 +53,6 @@
 - Interested in using Gitea API for creating PRs when `gh` CLI is not available
 - Prefers practical explanations using metaphors (e.g., Git as physical file cabinet with drawers for branches)
 - Appreciates layered explanations: technical details + layperson analogies for understanding complex concepts
+- Actively checks memory state to recall project goals and previous decisions
+- Expects memory persistence to work reliably across sessions for ongoing projects
 

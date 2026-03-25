@@ -140,3 +140,25 @@
 - Confirmed repository uses `master` as primary branch
 **Alternatives rejected:** Keep memory system isolated on feature branch (would cause memory unavailability in future sessions)
 
+## 2026-03-25 - Validate Persistent Memory System and Idea-Capture Skill Project Status
+**Decision:** Confirmed that memory system is working and idea-capture skill project is documented and ready for requirements interview
+**Reason:** User actively checked memory files to recall the idea-capture skill project status; memory system correctly preserved all previous decisions and project context
+**Key points:**
+- User queried memory files to verify persistent state: user.md, preferences.md, decisions.md, people.md
+- Skill Creator is installed and available in project repository at `.claude/skills/skill-creator/`
+- Idea-capture skill design is at planning stage: structured interview with 5 categories planned but not yet conducted
+- Memory system is functioning as designed: all previous session context preserved and retrievable
+**Alternatives rejected:** N/A (validation only)
+
+## 2026-03-25 - Initiate Requirements Interview for Idea-Capture Skill
+**Decision:** Conducted 5-category structured requirements interview for idea-capture skill in Portuguese
+**Reason:** User listed skills in repository and initiated requirements discovery for idea-capture skill; structured interview methodology established in previous sessions provides framework for gathering precise requirements
+**Categories explored:**
+1. Idea format (title only? title+description+tags? required fields?)
+2. Projects (definition, single vs. multiple project assignment)
+3. Storage (single file vs. per-project file vs. external service like Notion/Issues)
+4. Output/Visualization (confirmation format, listing/search functionality)
+5. Triggers (natural language phrases to activate skill, language support: Portuguese/English/both?)
+**Interview conducted in Portuguese:** User preference for technical discussions in Brazilian Portuguese
+**Alternatives rejected:** Conduct interview in English
+
