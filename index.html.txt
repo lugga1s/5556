@@ -56,6 +56,7 @@
     <li>Desconto progressivo a partir de 5 unidades</li>
     <li>Entrega grátis em pedidos selecionados</li>
     <li>Retirada no local</li>
+    <li>Cadeirinha para bebê disponível no espaço</li>
   </ul>
   <a class="btn" href="https://wa.me/55SEUNUMERO">Fazer encomenda</a>
 </section>
