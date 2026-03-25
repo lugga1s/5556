@@ -162,3 +162,71 @@
 **Interview conducted in Portuguese:** User preference for technical discussions in Brazilian Portuguese
 **Alternatives rejected:** Conduct interview in English
 
+## 2026-03-25 - Implement Idea-Capture Skill `/grabb`
+**Decision:** Implemented `/grabb` skill with complete workflow for capturing and organizing ideas by project
+**Reason:** Based on completed requirements interview; user ready to move from planning to implementation phase
+**Key implementation details:**
+- Skill name: `/grabb` (also triggered by Portuguese phrases like "anota essa ideia", "salva isso", "grava essa ideia")
+- Workflow: extract idea → ask clarifying questions (project, context, priority, new vs. improvement) → show confirmation summary → save to file
+- Storage structure: `ideas/<projeto>.md` files (one per project, project names in lowercase with hyphens)
+- Idea format: Markdown with fields — title, date, priority, context, description, status
+- Clarifying questions asked in conversational style during single message when possible
+- Always requires user confirmation before saving
+- Reads existing `ideas/` directory to list current projects and avoid duplicates
+- Supports natural language triggers in Portuguese and English
+- Project names support both creating new projects and selecting existing ones
+**Alternatives rejected:** Store all ideas in single file (chose per-project organization for better scalability)
+
+## 2026-03-25 - Complete Skill Implementation and Deployment
+**Decision:** Completed `/grabb` skill creation with SKILL.md definition, created ideas/ folder structure, committed and pushed changes
+**Reason:** Skill implementation and testing completed; ready to deploy to feature branch
+**Actions completed:**
+- Created `.claude/skills/grabb/SKILL.md` with full skill definition and behavioral rules
+- Created `ideas/` folder for storing project-specific idea files
+- Committed changes to feature branch `claude/list-repo-skills-Z2brY`
+- Pushed to remote
+**Status:** Skill is now active and ready for user testing
+**Alternatives rejected:** Hold for additional iteration before deployment
+
+## 2026-03-25 - Understand `/grabb` Skill Architecture
+**Decision:** Clarified how the `/grabb` skill is structured and operates
+**Reason:** User asked clarifying question about skill structure, wanted to confirm understanding of how skill definitions work
+**Key points:**
+- `.claude/skills/grabb/SKILL.md` is the "brain" or "OS" of the skill — contains all logic and behavioral rules
+- SKILL.md defines when the skill triggers, what questions to ask, how to format data, and where to save
+- This file is analogous to an operating system because it establishes the rules that Claude follows whenever `/grabb` is invoked
+- User confirmed understanding and is ready to make changes if needed
+**Alternatives rejected:** N/A (clarification only)
+
+## 2026-03-25 - Verify `/grabb` Skill Completion and Readiness for Future Iteration
+**Decision:** Confirmed `/grabb` skill is fully implemented, deployed, and ready for ongoing refinement
+**Reason:** User verified skill functionality and understanding of skill architecture; confirmed readiness to iterate based on usage and feedback
+**Key points:**
+- Skill created with complete workflow: idea extraction → clarifying questions → confirmation → save to `ideas/<projeto>.md`
+- Supports Portuguese and English natural language triggers
+- Per-project organization model chosen (one `.md` file per project in `ideas/` folder)
+- User understands SKILL.md as the central definition/configuration point for all skill behavior
+- Session mode (plan mode active) prevents auto-commits; memory files ready for commit in next non-plan session
+- User ready to make adjustments to skill logic, fields, or workflow if needed
+**Alternatives rejected:** N/A (status verification only)
+
+## 2026-03-25 - Enhanced `/grabb` Skill with Advanced Idea Management Features
+**Decision:** Implemented comprehensive upgrade to `/grabb` skill with multiple capture modes, idea templates, status tracking, and sub-commands
+**Reason:** User required more sophisticated idea capture system supporting various idea types (technical and non-technical) and idea lifecycle management
+**Key implementation details:**
+- **Two capture modes:**
+  - Quick mode: For fleeting ideas (shower ideas, Instagram inspiration) — minimal questioning, fast save
+  - Complete mode: For structured technical ideas — adaptive questions based on idea type
+- **Idea templates per type:** feature, bug, architecture, refactor, general
+- **Status lifecycle:** nova → em progresso → implementada → descartada
+- **Sub-commands:**
+  - `/grabb list` — list all ideas in projects
+  - `/grabb search` — find specific ideas by keywords
+  - `/grabb done` — mark ideas as implemented
+  - `/grabb review` — review and refine stored ideas
+- **Fallback project:** `geral` (general) for non-technical ideas outside code context
+- **Storage:** Per-project markdown files in `ideas/` directory with standardized format
+- **Skill definition:** SKILL.md fully specifies all behaviors, templates, questions, and command handling
+**Status:** Committed to feature branch, ready for testing
+**Alternatives rejected:** Single capture mode (now provides flexibility for different idea types)
+

@@ -55,4 +55,15 @@
 - Appreciates layered explanations: technical details + layperson analogies for understanding complex concepts
 - Actively checks memory state to recall project goals and previous decisions
 - Expects memory persistence to work reliably across sessions for ongoing projects
+- Prefers natural language triggers in Portuguese for skill activation (e.g., "anota essa ideia", "salva isso", "grava essa ideia")
+- Values confirmation workflow before saving ideas (show summary, ask permission, then commit)
+- Prefers project-based organization of ideas (one markdown file per project in `ideas/` directory)
+- Interested in chatGPT-like workflow for idea capture: interactive questioning → summary confirmation → automatic save
+- Uses metaphors and analogies to understand technical concepts (e.g., comparing SKILL.md to an "OS" or "brain" of the skill)
+- Asks clarifying questions to confirm understanding after implementation is complete (verifies architecture/structure comprehension)
+- Verifies skill functionality through direct testing and conceptual confirmation questions
+- Uses plan mode strategically to prevent unwanted auto-commits while developing features
+- Appreciates iterative enhancement of skills based on refined requirements and feature requests
+- Values dual-mode workflows: quick capture for ephemeral ideas, complete capture for structured technical ideas
+- Prefers adaptive questioning based on context (idea type, complexity, project)
 
