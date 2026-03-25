@@ -66,4 +66,5 @@
 - Appreciates iterative enhancement of skills based on refined requirements and feature requests
 - Values dual-mode workflows: quick capture for ephemeral ideas, complete capture for structured technical ideas
 - Prefers adaptive questioning based on context (idea type, complexity, project)
+- Uses `/grabb` skill with natural language Portuguese triggers to capture feature ideas from projects
 

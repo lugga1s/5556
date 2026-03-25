@@ -230,3 +230,26 @@
 **Status:** Committed to feature branch, ready for testing
 **Alternatives rejected:** Single capture mode (now provides flexibility for different idea types)
 
+## 2026-03-25 - Initiate Feature Idea Capture for Bahiarides Project
+**Decision:** Began requirements discovery for new demand-capture pages feature for bahiarides website
+**Reason:** User invoked `/grabb` skill with feature idea for transportation/mobility website project
+**Feature idea:** Create pages to capture demand from people searching for bus services or airport information
+**Key requirements under discussion:**
+- Potential for two separate pages (bus + airport) OR single page covering both
+- Bus page would include links to local bus companies
+- Cross-sell integration: link to existing private transfer page for users interested in premium transfers
+- Questions to clarify: project name confirmation, scope definition, existing company data, existing transfer page location, priority level
+**Status:** Assistant asked clarifying questions to structure the feature; awaiting user responses
+**Alternatives rejected:** N/A (requirements gathering phase)
+
+## 2026-03-25 - Pause Bahiarides Feature Discussion for Stakeholder Planning
+**Decision:** User indicated need for "more serious conversation" before proceeding with bus company data and implementation details for demand-capture pages
+**Reason:** User explicitly stated that further discussion about bus companies and feature scope required preliminary planning conversation; session ended with context restored but discussion not yet conducted
+**Key points:**
+- Feature requirements partially gathered: 2 separate pages (bus + airport) chosen
+- Private transfer page linking confirmed as requirement for bus page
+- Bus company data and implementation approach awaiting deeper discussion
+- User signaled this is strategic/important conversation, not just technical requirements gathering
+**Status:** Paused awaiting user to initiate "serious conversation" about approach/strategy
+**Alternatives rejected:** Continue with technical requirements gathering without strategic alignment
+

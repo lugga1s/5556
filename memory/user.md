@@ -33,4 +33,5 @@
 - Interested in building AI-assisted development skills and automation workflows
 - Active learner who inquires deeply about system mechanics before using tools
 - Works in a cloud/sandbox environment (local PC sometimes offline, can't always sync files locally)
+- Works on transportation/mobility projects, specifically a travel service website (bahiarides)
 
