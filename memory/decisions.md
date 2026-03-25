@@ -353,3 +353,18 @@
 - This context matters for proposing solutions that don't break workflow in other projects
 **Status:** User asked to clarify git hook origin and whether blocking behavior is intentional before deciding on improvements
 **Alternatives rejected:** Propose solutions without understanding whether current behavior is intentional design
+
+## 2026-03-26 - Simplify Stop Hook Explanation with Practical Demonstration
+**Decision:** Provided simplified explanation of stop hook problem using execution flow diagram, then demonstrated the actual problem with git commands
+**Reason:** User requested simpler explanation ("explica de uma maneira mais simples porque eu não entendi") and wanted critical analysis of proposed solutions ("analisa melhor se faz sentido o que você tá falando")
+**Key improvements:**
+- Simplified visual: Execution flow diagram showing Hook 1 creating files → Hook 2 detecting them
+- Practical demonstration: User ran `git add -A && git status` showing actual `memory/decisions.md` and `memory/preferences.md` as modified files
+- Clarified simple principle: Hook 1 **creates the problem** that Hook 2 **detects**, establishing the dependency loop
+**User requirements clarified:**
+- Wants to understand "Will this actually work?" before accepting solutions
+- Wants analysis of "What actually changes in practice?" with concrete examples
+- Prefers concrete evidence (ran git commands) over theoretical explanation
+**Key point addressed:** Git hook at `~/.claude/` is global — user may want blocking behavior in other projects, so changes must be carefully scoped
+**Status:** Simplified explanation provided with practical demonstration; ready to move forward with solution analysis
+**Alternatives rejected:** Continue with highly technical architecture-focused explanation without practical demo

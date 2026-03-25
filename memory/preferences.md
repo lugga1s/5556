@@ -80,4 +80,8 @@
 - Interested in understanding the architecture and problems with the current Stop hook system before proposing fixes
 - Appreciates detailed breakdowns of system components and their interactions
 - Interested in understanding whether current system behaviors are intentional or problematic
+- Prefers simple, concrete explanations with visual diagrams (e.g., arrows showing execution flow) over complex technical prose
+- Wants critical analysis of proposed solutions: "Does this actually make sense?", "Is it really the best option?"
+- Interested in practical implications: "What actually changes in practice with this solution?"
+- Uses demonstration and practical testing to validate understanding (ran `git add` and `git status` to see the actual problem)
 
