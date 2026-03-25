@@ -21,6 +21,8 @@
 - Prefers understanding the 3 skill creation patterns before building
 - Values having detailed requirements interviews before implementation
 - Interested in learning about trigger optimization and skill lifecycle
+- Uses `/grabb` skill actively for feature idea capture during development work
+- Integrates skill use into real project workflows
 
 ## Other Preferences
 - Interested in understanding automation and when memory updates happen automatically
@@ -66,4 +68,20 @@
 - Appreciates iterative enhancement of skills based on refined requirements and feature requests
 - Values dual-mode workflows: quick capture for ephemeral ideas, complete capture for structured technical ideas
 - Prefers adaptive questioning based on context (idea type, complexity, project)
+- Uses `/grabb` skill with natural language Portuguese triggers to capture feature ideas from projects
+- Interested in optimizing efficiency of sessions — wants to reduce unnecessary file reads and API calls
+- Prefers analyzing system behavior before making changes (requests discussion and analysis first, then implementation)
+- Concerned about token efficiency when using `/grabb` — doesn't want the entire repository to be read when only project context is needed
+- Values transparency about what context/files are loaded during sessions (wants to understand CLAUDE.md instructions impact)
+- Interested in conditional logic for CLAUDE.md instructions based on session trigger type (e.g., different behavior for `/grabb` vs regular sessions)
+- Interested in understanding Stop hook implementation details: memory persistence vs git verification mechanisms
+- Values understanding system dependencies and architectural problems before implementing solutions
+- Prefers discussing and analyzing options before implementing improvements to complex systems
+- Interested in understanding the architecture and problems with the current Stop hook system before proposing fixes
+- Appreciates detailed breakdowns of system components and their interactions
+- Interested in understanding whether current system behaviors are intentional or problematic
+- Prefers simple, concrete explanations with visual diagrams (e.g., arrows showing execution flow) over complex technical prose
+- Wants critical analysis of proposed solutions: "Does this actually make sense?", "Is it really the best option?"
+- Interested in practical implications: "What actually changes in practice with this solution?"
+- Uses demonstration and practical testing to validate understanding (ran `git add` and `git status` to see the actual problem)
 

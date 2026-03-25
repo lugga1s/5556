@@ -33,4 +33,8 @@
 - Interested in building AI-assisted development skills and automation workflows
 - Active learner who inquires deeply about system mechanics before using tools
 - Works in a cloud/sandbox environment (local PC sometimes offline, can't always sync files locally)
-
+- Runs a web agency with multiple clients (workspace structure in `clients/` directory)
+- Works on client projects including: **Bomdelle Confeitaria** (confectionery, HTML code exists), **Bahiarides** (transportation/travel service, currently in development)
+- Actively monitors system efficiency and token usage during sessions
+- Values understanding how much memory/resources are being consumed during operations
+- Prefers to analyze system behavior before implementing changes (seeks discussion and reasoning first)
