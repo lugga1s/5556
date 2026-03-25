@@ -10,7 +10,10 @@
 
 ## Goals
 - Extend Claude Code capabilities through custom skill development
-- Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill)
+- Create a custom skill for capturing and organizing ideas across projects (idea capture + project organization skill) — **COMPLETED AND ENHANCED** (`/grabb` skill with advanced multi-mode capture, templates, status tracking, and sub-commands)
+- Iterate on skills based on usage feedback and requirements refinement
+- Continue expanding skill ecosystem based on workflow optimization
+- Build sophisticated idea management system supporting multiple idea types and lifecycle management
 
 ## Working Style
 - Active with setting up development infrastructure and tooling
@@ -18,9 +21,11 @@
 - Works with Claude Code for automated development tasks
 - Conducts thorough requirements research before implementing features (researches business impact, real-world use cases, enterprise patterns)
 - Prefers structured interviews to capture requirements with clear categories and follow-up validation
+- Actively initiates requirements interviews for new features/skills using prepared question frameworks
 - Values understanding the full lifecycle of features (creation, testing, iteration, optimization)
 - Deeply inquisitive about system mechanics before using tools — asks clarifying questions about why certain features work the way they do
 - Prefers understanding the architecture and constraints before deciding on implementation approach
+- Follows up on planned work by checking memory files and resuming projects from previous sessions
 
 ## Personal
 
