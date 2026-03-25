@@ -69,6 +69,7 @@
 - Values dual-mode workflows: quick capture for ephemeral ideas, complete capture for structured technical ideas
 - Prefers adaptive questioning based on context (idea type, complexity, project)
 - Uses `/grabb` skill with natural language Portuguese triggers to capture feature ideas from projects
+- Prefers auto-save with defaults using "auto ok" command for quick idea capture when defaults are acceptable (type: feature, priority: média, status: nova)
 - Interested in optimizing efficiency of sessions — wants to reduce unnecessary file reads and API calls
 - Prefers analyzing system behavior before making changes (requests discussion and analysis first, then implementation)
 - Concerned about token efficiency when using `/grabb` — doesn't want the entire repository to be read when only project context is needed

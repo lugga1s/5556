@@ -368,3 +368,17 @@
 **Key point addressed:** Git hook at `~/.claude/` is global — user may want blocking behavior in other projects, so changes must be carefully scoped
 **Status:** Simplified explanation provided with practical demonstration; ready to move forward with solution analysis
 **Alternatives rejected:** Continue with highly technical architecture-focused explanation without practical demo
+
+## 2026-03-26 - Initiate Blog-Format Feature Capture for Bahiarides
+**Decision:** Captured feature idea for blog-like website redesign using `/grabb` skill
+**Reason:** User invoked `/grabb` skill with feature idea for Bahiarides project transportation website
+**Feature idea:** Create blog-like, informative website format to build authority and support customer purchase decision process
+**Key details captured:**
+- Title: "Formato Blog Informativo para Decisão de Compra"
+- Type: feature
+- Priority: média (medium)
+- Status: nova
+- Description: Site needs blog-like format to bring authority and help users throughout the purchase decision journey — guides, educational content, reviews
+- Saved to: `ideas/bahiarides.md`
+**Status:** Idea successfully captured and saved; 1 idea in bahiarides project file
+**Alternatives rejected:** N/A (requirements gathering and capture complete)
