@@ -317,3 +317,39 @@
 - When to allow full context loading (e.g., user asks for Bahiarides context: should it trigger exploration or use memory files?)
 **Status:** Analysis complete, proposed optimization strategy identified, awaiting final decision on implementation
 **Alternatives rejected:** Leave current behavior unchanged (wastes token budget on routine idea-capture workflows)
+
+## 2026-03-26 - Analyze Stop Hook Architecture and Identified Problems
+**Decision:** Conducted detailed analysis of Stop hook system revealing dependency problems and three improvement options
+**Reason:** User wanted to understand the complete picture of how memory persistence and git hooks interact, and what architectural problems exist with current implementation
+**Key findings:**
+- Two distinct Stop hook components: (1) `settings.json` memory hook (type: agent) — updates memory files at session end, (2) `~/.claude/stop-hook-git-check.sh` git hook (type: command) — verifies uncommitted/unpushed changes
+- **Problem 1:** Memory hook creates modified files that trigger git hook blocking → creates dependency loop requiring manual intervention
+- **Problem 2:** Memory hook runs every session regardless of whether new information was captured (inefficient)
+- **Problem 3:** No integration between hooks — memory hook doesn't automatically commit its changes
+**Four improvement options discussed** (not yet implemented):
+- **Option A:** Memory hook auto-commits after updating files (resolves dependency loop)
+- **Option B:** Unify into single hook (update memory → commit → push → verify)
+- **Option C:** Make git hook smarter (ignore `memory/` files or check after memory hook completes)
+- **Option D:** Make memory hook conditional (only run when session has relevant content)
+**Status:** Analysis and option discussion complete, awaiting decision on which improvement to prioritize
+**Alternatives rejected:** Implement without analyzing problems first
+
+## 2026-03-26 - Deep Analysis of Stop Hook System Components
+**Decision:** Provided detailed explanation of how the two Stop hook components interact and the specific problems this creates
+**Reason:** User explicitly wanted to understand "more about the current stop hook and how to improve it" — needed complete architectural picture
+**Component details:**
+- **Memory hook** (in `settings.json`, type `agent`): Launches full sub-agent that reads all 4 memory files, analyzes conversation, and writes updates. High cost (full model invocation per session)
+- **Git hook** (bash script at `~/.claude/stop-hook-git-check.sh`, type `command`): Verifies uncommitted/unstaged/untracked changes and unpushed commits. Returns `exit 2` to block session termination if issues found
+**Key insight:** The dependency loop is the most critical problem — memory hook modifies files → git hook detects modifications → blocks with error message → requires manual commit
+**Status:** Detailed explanation provided with four improvement options for user consideration
+**Alternatives rejected:** Simplified explanation without architectural details
+
+## 2026-03-26 - Clarify Stop Hook Global Scope and Intentionality
+**Decision:** Highlighted that git hook at `~/.claude/stop-hook-git-check.sh` is globally configured and affects ALL projects, not just current one
+**Reason:** Before proposing solutions to hook problems, important to clarify whether the git blocking behavior is intentional system design or unintended side effect
+**Key points:**
+- Git hook script is at global scope (`~/.claude/`), runs on every project, not just `/home/user/5556`
+- Before implementing changes, need to understand: Was this git verification intentionally created? Does user want this blocking behavior in other projects?
+- This context matters for proposing solutions that don't break workflow in other projects
+**Status:** User asked to clarify git hook origin and whether blocking behavior is intentional before deciding on improvements
+**Alternatives rejected:** Propose solutions without understanding whether current behavior is intentional design
